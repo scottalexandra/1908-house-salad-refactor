@@ -1,5 +1,11 @@
 class SearchController < ApplicationController
   def index
+
+    render locals: {
+      search_results: ???
+    }
+
+
     state = params[:state]
 
     conn = Faraday.new(url: "https://api.propublica.org") do |faraday|
