@@ -2,8 +2,11 @@ class SearchController < ApplicationController
   def index
 
     render locals: {
-      search_results: ???
+      search_results: SearchResult.new(params[:state])
     }
+
+
+
 
 
     state = params[:state]
